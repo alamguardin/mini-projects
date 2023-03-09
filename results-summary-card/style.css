@@ -26,7 +26,7 @@ p {
 /* Card Styles */
 
 .card {
-  max-width: 800px;
+  max-width: 650px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: #ffffff;
@@ -61,6 +61,12 @@ p {
     radial-gradient(at 15% 36%, hsla(202, 76%, 64%, 1) 0px, transparent 50%);
 }
 
+.card__section-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .card__legend {
   font-weight: 600;
 }
@@ -72,7 +78,7 @@ p {
   background: linear-gradient(
     0deg,
     rgba(48, 30, 103, 0) 0%,
-    rgba(3, 0, 28, 1) 100%
+    rgb(165 175 212) 100%
   );
   border-radius: 100%;
   display: flex;
@@ -83,7 +89,6 @@ p {
 
 .card__result {
   font-size: 3em;
-  color: #7bbde6;
 }
 
 .card__expected-result,
@@ -94,4 +99,89 @@ p {
 .card__description {
   text-align: center;
   margin-top: 0.625rem;
+}
+
+.card__tags {
+  display: grid;
+  gap: 0.625em;
+  list-style: none;
+  margin: 1.875em 0;
+  padding: 0;
+}
+
+.card__item {
+  background: #cccccc;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3125em;
+}
+
+.card__item-name {
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+}
+
+.card__item-name span {
+  font-size: 0.875em;
+  font-weight: 600;
+}
+
+.card__item-result span {
+  font-weight: 600;
+  color: #03001c;
+}
+
+.card__item.red {
+  background: rgba(255, 3, 3, 0.2);
+}
+
+.card__item.red .card__item-name {
+  color: rgba(255, 3, 3, 0.6);
+}
+
+.card__item.yellow {
+  background: rgba(249, 148, 23, 0.2);
+}
+
+.card__item.yellow .card__item-name {
+  color: rgba(249, 148, 23, 0.6);
+}
+
+.card__item.green {
+  background: rgba(60, 207, 78, 0.2);
+}
+
+.card__item.green .card__item-name {
+  color: rgba(60, 207, 78, 0.6);
+}
+
+.card__item.blue {
+  background: rgba(6, 0, 71, 0.2);
+}
+
+.card__item.blue .card__item-name {
+  color: rgba(6, 0, 71, 0.6);
+}
+
+.card__button {
+  font-size: 0.875em;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 1.25rem;
+  border: none;
+  outline: none;
+  background: #03001c;
+  color: #ffffff;
+  cursor: pointer;
+  transition: .2s all ease;
+}
+
+.card__button:hover {
+  transform: translateY(-4px);
+  -webkit-box-shadow: 0px 0px 31px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 31px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 31px -15px rgba(0, 0, 0, 0.75);
 }
